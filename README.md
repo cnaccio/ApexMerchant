@@ -1,7 +1,7 @@
 # ApexMerchant
 A multi-gateway payment processing library for Apex &amp; Salesforce / Force.com inspired by [ActiveMerchant](https://github.com/activemerchant/active_merchant) a ruby library for integrating with multiple payment processors.
 
-This code was pulled from an AppExchange/ISV payments app I've been working on. I've poured a ton of time into developing a payments library that supports multiple payment gateways with a seamless/consistent API and so I thought I'd share with the community. This library will essentially enable you to add credit card, and bank payment processing to your Salesforce org, or app with just a few lines of code. The best part is that since the API is consistent accross all gateways you can easily switch out payment providers without changing any code. This project is a work in progress, and I'll continue adding to it as we build our AppExchange app. My hope is that over time the community will contribute additional payment gateways to this library, and we'll all have a simple payments library for Salesforce. After all how many times have you developed adhoc payment intergrations for your clients, or company?
+This code was pulled from an AppExchange/ISV payments app I've been working on. I've poured a ton of time into developing a payments library that supports multiple payment gateways with a seamless/consistent API and so I thought I'd share with the community. This library will essentially enable you to add credit card, and bank payment processing to your Salesforce org, or app with just a few lines of code. The best part is that since the API is consistent across all gateways you can easily switch out payment providers without changing any code. This project is a work in progress, and I'll continue adding to it as we build our AppExchange app. My hope is that over time the community will contribute additional payment gateways to this library, and we'll all have a simple payments library for Salesforce. After all how many times have you developed ad-hoc payment integrations for your clients, or company?
 
 
 ## Usage
@@ -11,7 +11,7 @@ This simple example demonstrates how to process supported transactions using a p
 Map<String, Object> options = new Map<String, Object> {
 	'login' => 'sk_live_41Y6cbbMW9MQciBRf84hs84j',
 	'password' => 'sk_test_RSylZfxqhm65G0yGh4jks94jf',
-	'testMode' => 'true'	
+	'testMode' => 'true'
 }
 
 // Setup new instance of merchant passing in your gateway name (Stripe, AuthorizeDotNet, PayPal)
@@ -60,6 +60,10 @@ The main methods implemented by gateways are:
 - [Authorize.Net](http://www.authorize.net/)
 - [PayPal](https://developer.paypal.com)
 - More to come...
+
+
+## Contribute a New Gateway
+I'll include better instructions in the future, but for now you can simply clone one of the existing payment gateway classes, for instance `merchant_Gateway_Stripe` as `merchant_Gateway_YourMerchantName`, and make needed changes. The code is commented fairly well so this should be enough to get you started.
 
 
 ## Contact & Feedback
