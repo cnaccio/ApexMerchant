@@ -52,6 +52,12 @@ private class merchant_Tests {
          * When
          */
         
+        // Start test
+        Test.startTest();
+
+        // Set mock callout class
+        Test.setMock(HttpCalloutMock.class, new merchant_Mocks());
+
         // Merchant transaction actions
         merchant.purchase(amount, source);
         String chargeId = merchant.authorize(amount, source).reference;
@@ -69,7 +75,10 @@ private class merchant_Tests {
             'token' => customerId
         };
         merchant.unstore(reference);
+        Boolean verified = merchant.verify();
 
+        // Stop test
+        Test.stopTest();
 
         /**
          * Then
@@ -77,7 +86,7 @@ private class merchant_Tests {
         
         // Validate test results
         System.assert(
-            merchant.verify(),
+            verified,
             'Merchant gateway verification failed.'
         );
     }	
