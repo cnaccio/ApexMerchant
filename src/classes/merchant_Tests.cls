@@ -52,10 +52,15 @@ private class merchant_Tests {
          * When
          */
         
-        // ...
-        List<edge_GetOpportunityDefaultsAction.Result> results = edge_GetOpportunityDefaultsAction.getOpportunityDefaults(
-            requests
-        );
+        // Merchant transaction actions
+        merchant.purchase(amount, source);
+        Map<String, Object> reference = merchant.authorize(amount, source).reference;
+        merchant.capture(amount, reference);
+        merchant.void(reference);
+        merchant.refund(amount, reference);
+        merchant.credit(amount, source);
+        reference = merchant.store(source).reference;
+        merchant.unstore(reference);
 
 
         /**
@@ -64,14 +69,8 @@ private class merchant_Tests {
         
         // Validate test results
         System.assert(
-            results.size() > 0,
-            'Expected at least one Opportunity Defaults result, but received "' +
-            results.size() +
-            '".'
-        );
-        System.assert(
-            results.get(0).isPointOfSaleOnly == false,
-            'Expected admin user NOT to be a Pro Star Only user.'
+            merchant.verify(),
+            'Merchant gateway verification failed.'
         );
     }	
 }
