@@ -171,46 +171,62 @@ public class merchant_Mocks implements HttpCalloutMock {
                         '    "shipping": null,' +
                         '    "tax_exempt": "none",' +
                         '    "test_clock": null,' +
-                        '    "sources": [{' +
-                        '       "id": "src_1L1Vi6KTIpx1Cy0oYXRbnVAT",' +
-                        '       "object": "source",' +
-                        '       "ach_credit_transfer": {' +
-                        '           "account_number": "test_52796e3294dc",' +
-                        '           "routing_number": "110000000",' +
-                        '           "fingerprint": "ecpwEzmBOSMOqQTL",' +
-                        '           "bank_name": "TEST BANK",' +
-                        '           "swift_code": "TSTEZ122"' +
-                        '       },' +
-                        '       "amount": null,' +
-                        '       "client_secret": "src_client_secret_0EW0eJJ0cHdMxCTbXA9Xyvpk",' +
-                        '       "created": 1653052662,' +
-                        '       "currency": "usd",' +
-                        '       "flow": "receiver",' +
-                        '       "livemode": false,' +
-                        '       "metadata": {},' +
-                        '       "owner": {' +
-                        '           "address": null,' +
-                        '           "email": "jenny.rosen@example.com",' +
-                        '           "name": null,' +
-                        '           "phone": null,' +
-                        '           "verified_address": null,' +
-                        '           "verified_email": null,' +
-                        '           "verified_name": null,' +
-                        '           "verified_phone": null' +
-                        '       },' +
-                        '       "receiver": {' +
-                        '           "address": "121042882-38381234567890123",' +
-                        '           "amount_charged": 0,' +
-                        '           "amount_received": 0,' +
-                        '           "amount_returned": 0,' +
-                        '           "refund_attributes_method": "email",' +
-                        '           "refund_attributes_status": "missing"' +
-                        '       },' +
-                        '       "statement_descriptor": null,' +
-                        '       "status": "pending",' +
-                        '       "type": "ach_credit_transfer",' +
-                        '       "usage": "reusable"' +
-                        '    }]' +
+                        '    "sources": {' +
+                        '       "object": "list",' +
+                        '       "url": "/v1/customers/cus_LixY2hSY26Mvpe/payment_methods",' +
+                        '       "has_more": false,' +
+                        '       "data": [' +
+                        '           {' +
+                        '               "id": "pm_1KvzkQ2eZvKYlo2C9BL7g2vU",' +
+                        '               "object": "payment_method",' +
+                        '               "billing_details": {' +
+                        '                   "address": {' +
+                        '                       "city": null,' +
+                        '                       "country": null,' +
+                        '                       "line1": null,' +
+                        '                       "line2": null,' +
+                        '                       "postal_code": null,' +
+                        '                       "state": null' +
+                        '                   },' +
+                        '                   "email": null,' +
+                        '                   "name": null,' +
+                        '                   "phone": null' +
+                        '               },' +
+                        '               "card": {' +
+                        '                   "brand": "visa",' +
+                        '                   "checks": {' +
+                        '                       "address_line1_check": null,' +
+                        '                       "address_postal_code_check": null,' +
+                        '                       "cvc_check": "pass"' +
+                        '                   },' +
+                        '                   "country": "US",' +
+                        '                   "exp_month": 5,' +
+                        '                   "exp_year": 2023,' +
+                        '                   "fingerprint": "Xt5EWLLDS7FJjR1c",' +
+                        '                   "funding": "credit",' +
+                        '                   "generated_from": null,' +
+                        '                   "last4": "4242",' +
+                        '                   "networks": {' +
+                        '                       "available": [' +
+                        '                           "visa"' +
+                        '                       ],' +
+                        '                       "preferred": null' +
+                        '                   },' +
+                        '                   "three_d_secure_usage": {' +
+                        '                       "supported": true' +
+                        '                   },' +
+                        '                   "wallet": null' +
+                        '               },' +
+                        '               "created": 1651738158,' +
+                        '               "customer": null,' +
+                        '               "livemode": false,' +
+                        '               "metadata": {' +
+                        '                   "order_id": "6735"' +
+                        '               },' +
+                        '               "type": "card"' +
+                        '           }' +
+                        '       ]' +
+                        '    }' +
                         '}'
                     );
                 }
