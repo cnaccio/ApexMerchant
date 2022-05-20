@@ -68,7 +68,12 @@ private class merchant_Tests {
         merchant.capture(amount, reference);
         merchant.void(reference);
         merchant.refund(amount, reference);
-        merchant.credit(amount, source);
+        Boolean creditFailed = false;
+        try {
+            merchant.credit(amount, source);
+        } catch (Exception ex) {
+            creditFailed = true;
+        }
         String customerId = merchant.store(source).reference;
         reference = new Map<String, Object> {
             'name' => 'Token',
@@ -88,6 +93,10 @@ private class merchant_Tests {
         System.assert(
             verified,
             'Merchant gateway verification failed.'
+        );
+        System.assert(
+            creditFailed,
+            'Expected "credit" transaction to fail for Stripe.'
         );
     }	
 }
