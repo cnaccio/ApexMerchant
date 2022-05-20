@@ -134,9 +134,45 @@ public class merchant_Mocks implements HttpCalloutMock {
                 if (req.getMethod() == 'DELETE') {
                     res.setBody(
                         '{' +
-                        '    "id": "cus_LiqYWfkZWKSznr",' +
-                        '    "object": "customer",' +
-                        '    "deleted": true' +
+                        '    "id": "src_1L1VdDKTIpx1Cy0oPl3yBbVM",' +
+                        '    "object": "source",' +
+                        '    "ach_credit_transfer": {' +
+                        '        "account_number": "test_52796e3294dc",' +
+                        '        "routing_number": "110000000",' +
+                        '        "fingerprint": "ecpwEzmBOSMOqQTL",' +
+                        '        "bank_name": "TEST BANK",' +
+                        '        "swift_code": "TSTEZ122"' +
+                        '    },' +
+                        '    "amount": 0,' +
+                        '    "client_secret": "src_client_secret_4x6zVlCFiZ8sYA4Xg84WtFil",' +
+                        '    "created": 1653052359,' +
+                        '    "currency": "usd",' +
+                        '    "flow": "receiver",' +
+                        '    "livemode": false,' +
+                        '    "metadata": {},' +
+                        '    "owner": {' +
+                        '        "address": null,' +
+                        '        "email": "jenny.rosen@example.com",' +
+                        '        "name": null,' +
+                        '        "phone": null,' +
+                        '        "verified_address": null,' +
+                        '        "verified_email": null,' +
+                        '        "verified_name": null,' +
+                        '        "verified_phone": null' +
+                        '    },' +
+                        '    "receiver": {' +
+                        '        "address": "121042882-38381234567890123",' +
+                        '        "amount_received": 1000,' +
+                        '        "amount_charged": 1000,' +
+                        '        "amount_returned": 0,' +
+                        '        "refund_attributes_status": "missing",' +
+                        '        "refund_attributes_method": "email"' +
+                        '    },' +
+                        '    "statement_descriptor": null,' +
+                        '    "status": "consumed",' +
+                        '    "type": "ach_credit_transfer",' +
+                        '    "usage": "reusable",' +
+                        '    "customer": "cus_LixY2hSY26Mvpe"' +
                         '}'
                     );
                 }
