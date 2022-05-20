@@ -9,6 +9,8 @@
 */
 @isTest
 public class merchant_Mocks implements HttpCalloutMock {
+    
+    // Implement respond interface method
     public HTTPResponse respond(HTTPRequest req) {
         HttpResponse res = new HttpResponse();
 
