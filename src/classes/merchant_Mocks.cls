@@ -170,7 +170,47 @@ public class merchant_Mocks implements HttpCalloutMock {
                         '    "preferred_locales": [],' +
                         '    "shipping": null,' +
                         '    "tax_exempt": "none",' +
-                        '    "test_clock": null' +
+                        '    "test_clock": null,' +
+                        '    "sources": [{' +
+                        '       "id": "src_1L1Vi6KTIpx1Cy0oYXRbnVAT",' +
+                        '       "object": "source",' +
+                        '       "ach_credit_transfer": {' +
+                        '           "account_number": "test_52796e3294dc",' +
+                        '           "routing_number": "110000000",' +
+                        '           "fingerprint": "ecpwEzmBOSMOqQTL",' +
+                        '           "bank_name": "TEST BANK",' +
+                        '           "swift_code": "TSTEZ122"' +
+                        '       },' +
+                        '       "amount": null,' +
+                        '       "client_secret": "src_client_secret_0EW0eJJ0cHdMxCTbXA9Xyvpk",' +
+                        '       "created": 1653052662,' +
+                        '       "currency": "usd",' +
+                        '       "flow": "receiver",' +
+                        '       "livemode": false,' +
+                        '       "metadata": {},' +
+                        '       "owner": {' +
+                        '           "address": null,' +
+                        '           "email": "jenny.rosen@example.com",' +
+                        '           "name": null,' +
+                        '           "phone": null,' +
+                        '           "verified_address": null,' +
+                        '           "verified_email": null,' +
+                        '           "verified_name": null,' +
+                        '           "verified_phone": null' +
+                        '       },' +
+                        '       "receiver": {' +
+                        '           "address": "121042882-38381234567890123",' +
+                        '           "amount_charged": 0,' +
+                        '           "amount_received": 0,' +
+                        '           "amount_returned": 0,' +
+                        '           "refund_attributes_method": "email",' +
+                        '           "refund_attributes_status": "missing"' +
+                        '       },' +
+                        '       "statement_descriptor": null,' +
+                        '       "status": "pending",' +
+                        '       "type": "ach_credit_transfer",' +
+                        '       "usage": "reusable"' +
+                        '    }]' +
                         '}'
                     );
                 }
