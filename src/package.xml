@@ -4,8 +4,6 @@
     <types>
         <members>Merchant</members>
         <members>merchant_Gateway</members>
-        <members>merchant_Gateway_AuthorizeDotNet</members>
-        <members>merchant_Gateway_PayPal</members>
         <members>merchant_Gateway_Stripe</members>
         <members>merchant_IGateway</members>
         <members>merchant_Request</members>
@@ -16,6 +14,7 @@
         <members>merchant_Source_Reference</members>
         <members>merchant_Source_Token</members>
         <members>merchant_TransactionOptions</members>
+        <members>merchant_Tests</members>
         <name>ApexClass</name>
     </types>
     <version>34.0</version>
