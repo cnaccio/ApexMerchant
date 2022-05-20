@@ -27,7 +27,7 @@ private class merchant_Tests {
             'login' => 'sk_live_41Y6cbbMW9MQciBRf84hs84j',
             'password' => 'sk_test_RSylZfxqhm65G0yGh4jks94jf',
             'testMode' => 'true'
-        }
+        };
 
         // Setup new instance of merchant passing in your gateway name (Stripe, AuthorizeDotNet, PayPal)
         Merchant merchant = new Merchant('Stripe', options);
@@ -54,7 +54,11 @@ private class merchant_Tests {
         
         // Merchant transaction actions
         merchant.purchase(amount, source);
-        Map<String, Object> reference = merchant.authorize(amount, source).reference;
+        String chargeId = merchant.authorize(amount, source).reference;
+        Map<String, Object> reference = new Map<String, Object> {
+            'name' => 'Reference',
+            'reference' => chargeId
+        };
         merchant.capture(amount, reference);
         merchant.void(reference);
         merchant.refund(amount, reference);
