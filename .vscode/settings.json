@@ -1,0 +1,5 @@
+{
+    "files.exclude": {
+        "**/*.xls-meta.xml": true
+    }
+}
