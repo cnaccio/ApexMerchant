@@ -6,6 +6,7 @@
         <members>merchant_Gateway</members>
         <members>merchant_Gateway_Stripe</members>
         <members>merchant_IGateway</members>
+        <members>merchant_Mocks</members>
         <members>merchant_Request</members>
         <members>merchant_Response</members>
         <members>merchant_Source</members>
