@@ -63,7 +63,11 @@ private class merchant_Tests {
         merchant.void(reference);
         merchant.refund(amount, reference);
         merchant.credit(amount, source);
-        reference = merchant.store(source).reference;
+        String customerId = merchant.store(source).reference;
+        reference = new Map<String, Object> {
+            'name' => 'Token',
+            'token' => customerId
+        };
         merchant.unstore(reference);
 
 
